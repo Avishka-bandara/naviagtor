@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_app/naviagtor/navigator.dart';
 import 'package:navigator_app/screens/profile/demo_profile_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -12,15 +13,27 @@ class ProfileScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Profile Screen"),
-            ElevatedButton(onPressed: () {}, child: Text("Go to Profile page")),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => DemoProfileScreen()),
-                );
+                Navigator.of(context).pushNamed("/profile");
               },
               child: Text("Go to Profile page"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                var bar =
+                    bottomNavigatorKey.currentWidget as BottomNavigationBar;
+                bar.onTap!(0);
+                feedNavigatorKey.currentState!.pushNamed("/feed");
+              },
+              child: Text("Go to demo feed page"),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                globalNavigatorKey.currentState!.pushNamed("/profile");
+              },
+              child: Text("Go to full screen Profile page"),
             ),
           ],
         ),

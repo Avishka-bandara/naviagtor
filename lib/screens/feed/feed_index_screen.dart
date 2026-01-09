@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_app/naviagtor/navigator.dart';
 import 'package:navigator_app/screens/feed/demo_feed_screen.dart';
 import 'package:navigator_app/screens/feed/feed_screen.dart';
 
@@ -8,6 +9,7 @@ class FeedIndexScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Navigator(
+      key: feedNavigatorKey,
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case "/":

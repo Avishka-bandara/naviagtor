@@ -6,9 +6,6 @@ final GlobalKey<NavigatorState> globalNavigatorKey = GlobalKey<NavigatorState>(
 final GlobalKey<NavigatorState> feedNavigatorKey = GlobalKey<NavigatorState>(
   debugLabel: "Feed",
 );
-final GlobalKey<NavigatorState> homeNavigatorKey = GlobalKey<NavigatorState>(
-  debugLabel: "Home",
-);
 final GlobalKey<NavigatorState> profileNavigatorKey = GlobalKey<NavigatorState>(
   debugLabel: "Profile",
 );

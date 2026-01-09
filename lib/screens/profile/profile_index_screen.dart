@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_app/naviagtor/navigator.dart';
 import 'package:navigator_app/screens/profile/demo_profile_screen.dart';
 import 'package:navigator_app/screens/profile/profile_screen.dart';
 
@@ -8,6 +9,7 @@ class ProfileIndexScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Navigator(
+      key: profileNavigatorKey,
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case "/":

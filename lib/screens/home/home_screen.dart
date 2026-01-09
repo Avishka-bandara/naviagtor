@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_app/naviagtor/navigator.dart';
 import 'package:navigator_app/screens/feed/feed_index_screen.dart';
 import 'package:navigator_app/screens/profile/profile_index_screen.dart';
 
@@ -19,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: const [FeedIndexScreen(), ProfileIndexScreen()],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        key: bottomNavigatorKey,
         currentIndex: _currentIndex,
         onTap: (value) {
           setState(() {
